@@ -1,10 +1,10 @@
 <template>
-   <SideBar />
-    <slot />
+  <div>
+        
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { SideBar } from '#components';
 
 </script>
 
