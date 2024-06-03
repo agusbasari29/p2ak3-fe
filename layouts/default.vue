@@ -1,10 +1,16 @@
 <template>
    <SideBar />
-    <slot />
+   <section id="content">
+    <Navigation />
+    <Contents>
+       <slot />
+     </Contents>
+   </section>
+
 </template>
 
 <script lang="ts" setup>
-import { SideBar } from '#components';
+import { SideBar, Contents } from '#components';
 
 </script>
 

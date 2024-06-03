@@ -7,7 +7,7 @@
       variant="ghost"
       aria-label="Theme"
       @click="isDark = !isDark"
-      class="float-right hover:animate-pulse opacity-75"
+      class="float-right hover:animate-pulse opacity-100"
     />
     <template #fallback>
       <div class="w-8 h-8" />
@@ -30,8 +30,8 @@ const isDark = computed({
   }
 })
 
-const nuxtApp = useNuxtApp();
-const loading = ref(false);
+const nuxtApp = useNuxtApp()
+const loading = ref(false)
 nuxtApp.hook("page:start", () => {
   loading.value = true;
 });

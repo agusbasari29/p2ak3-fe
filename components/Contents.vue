@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <Chart />
-  </div>
+    
 </template>
 
 <script lang="ts" setup>
-import { Chart } from '#components'
+
 </script>
 
 <style>
