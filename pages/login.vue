@@ -1,5 +1,5 @@
 <template>
-  <UForm :schema="schema" :state="state" class="space-y-4 fixed w-80 pt-40" @submit="onSubmit">
+  <UForm :schema="schema" :state="state" class="space-y-4 fixed w-80 mt-20" @submit="onSubmit">
     <div class="text-center font-black text-4xl text-primary">Login</div>
     <UDivider icon="i-heroicons-user-circle-solid text-primary" />
     <UFormGroup label="Username" name="username">
@@ -12,7 +12,9 @@
 
     <UButton type="submit" class="font-bold text-center">Login
     </UButton>
-    <UDivider icon="i-heroicons-bolt-solid text-primary" />
+    <UDivider>
+      <DarkLight />
+    </UDivider>
     <div class="text-center font-bold text-primary text-md">SIMRU - SIMPEL WASNAKER</div>
     <div class="text-center font-bold text-primary text-sm position-bottom">&copy;Asteria Technology DevTeams</div>
   </UForm>
