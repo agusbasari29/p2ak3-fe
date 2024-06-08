@@ -1,7 +1,5 @@
 <template>
-  <div>
     <Bar :data="chartData" :options="chartOptions" />
-  </div>
 </template>
 
 <script lang="ts" setup>
@@ -20,11 +18,11 @@ import { ref } from 'vue'
 ChartJS.register(CategoryScale, LinearScale, Title, Tooltip, Legend, BarElement)
 
 const chartData = ref({
-    labels: ['January', 'February', 'March', 'April', 'May'],
+    labels: ['January', 'February', 'March', 'April', 'May', 'june', 'july', 'august', 'september', 'october', 'november', 'december'],
     datasets: [{
-        label: 'Data One',
+        label: 'Chart Orders',
         backgroundColor: '#f87979',
-        data: [40, 20, 12, 50, 10],
+        data: [40, 20, 12, 50, 10, 30, 35, 50, 27, 44, 28, 19],
     }]
 })
 

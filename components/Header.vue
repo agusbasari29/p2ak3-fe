@@ -1,8 +1,8 @@
 <template>
-    <header class="bg-background/75 backdrop-blur border-b -mb-px sticky top-0 z-50 border-gray-200 dark:border-gray-800">
+    <header class="bg-background/75 backdrop-blur border-b -mb-px-5 pt-5 sticky top-0 z-50 border-gray-200 h-20 dark:border-gray-800">
         <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex items-center justify-between gap-3 h-[--header-height]">
             <div class="lg:flex-1 flex items-center gap-1.5">
-                <NuxtLink to="/" class="flex items-end gap-2 font-bold text-xl text-gray-900 dark:text-blue-500 text-orange-500">
+                <NuxtLink to="/" class="flex items-end gap-2 font-bold text-2xl text-gray-900 dark:text-blue-200 text-blue-600">
                     <UIcon name="i-heroicons-chat-bubble-bottom-center-solid" class="h-10"/>
                     <span class="h-9">SIMPELWASNAKER</span>
                 </NuxtLink>
@@ -28,9 +28,19 @@
                     </template>
                 </UInput>
             </div>
-            <div class="flex items-center justify-end lg:flex-1 gap-1.5">
-                <UHorizontalNavigation :links="nav" />
-                    <DarkLight />
+            <div class="flex items-center justify-end lg:flex-1 gap-3.5">
+                <!-- <UHorizontalNavigation :links="nav" /> -->
+                <div class="pt-2">
+                  <UChip text="3" size="xl">
+                    <UButton variant="link" icon="i-heroicons-chat-bubble-left-ellipsis-solid" to="/" :padded="false"/>
+                  </UChip>
+                </div>
+                <div class="pt-2">
+                  <UChip text="10" size="xl">
+                    <UButton variant="link" icon="i-heroicons-bell-solid" to="/" :padded="false"/>
+                  </UChip>  
+                </div>
+                <DarkLight />
                 <UDropdown :items="items">
                     <UAvatar name="avatar" src="https://avatars.githubusercontent.com/u/17192048?v=4" />
                 </UDropdown>
@@ -47,13 +57,21 @@ const nav = [
     {
         label: '',
         icon: 'i-heroicons-bell-solid',
-        badge: 2,
-        to: '/notify'
+        to: '/notify',
+        chip: {
+          label: 'New',
+            color: 'green',
+            count: 10
+        }
     },{
         label: '',
         icon: 'i-heroicons-user-solid',
-        badge: 9,
-        to: '/login'
+        to: '/login',
+        chip: {
+          label: 'New',
+            color: 'green',
+            count: 10
+        }
     }
 ]
 const items = [
